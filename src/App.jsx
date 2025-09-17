@@ -12,7 +12,7 @@ import {
 function StatCard({ title, value, sub, icon }) {
   return (
     <div className="w-[264px] h-[140px] rounded-3xl bg-card/100 flex flex-col justify-center px-6 relative overflow-hidden shadow-lg">
-      <div className="flex flex-row-reverse items-center gap-6">
+      <div className="flex items-center gap-6">
         <div className="w-9 h-9 rounded-xl bg-white/20 grid place-items-center relative">
           <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/40 to-white/10 blur-sm"></div>
           <div className="relative z-10">{icon}</div>
@@ -58,7 +58,7 @@ function ActivityItem({ status, statusColor, title, meta }) {
 export default function App() {
   return (
     <div className="min-h-screen p-2">
-      <div className="max-w-[1440px] mx-auto flex flex-row-reverse gap-2">
+      <div className="max-w-[1440px] mx-auto flex flex-row gap-2">
         {/* Left sidebar */}
         <div className="w-[246px] h-[792px] flex flex-col gap-2">
           <div className="bg-sidebar rounded-[28px] shadow-lg h-[474px] relative overflow-hidden p-3">

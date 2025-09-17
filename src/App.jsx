@@ -86,12 +86,12 @@ export default function App() {
                 ['دستیار هوشمند'],
                 ['ساخت تصویر'],
               ].map(([label], idx) => (
-                <div key={idx} className={`h-[46px] rounded-full flex items-center justify-between px-3 cursor-pointer transition-all duration-200 hover:bg-white/10 relative ${idx===0 ? 'bg-white/30' : ''}`}>
+                <div key={idx} className={`h-[46px] rounded-full flex items-center justify-end gap-3 px-3 cursor-pointer transition-all duration-200 hover:bg-white/10 relative ${idx===0 ? 'bg-white/30' : ''}`}>
                   {idx === 0 && (
                     <div className="absolute inset-0 rounded-full bg-gradient-to-r from-white/20 to-transparent blur-sm"></div>
                   )}
                   <span className="text-white text-sm font-medium relative z-10">{label}</span>
-                  <div className="w-[42px] h-[42px] rounded-full bg-white/20 flex items-center justify-center relative">
+                  <div className="w-[42px] h-[42px] rounded-full bg-white/20 grid place-items-center relative">
                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/30 to-transparent blur-sm"></div>
                     <div className="w-2 h-2 rounded-full bg-white/60 relative z-10"></div>
                   </div>

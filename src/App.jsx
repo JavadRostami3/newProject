@@ -45,9 +45,9 @@ function UpcomingItem({ title, time, color }) {
 
 function ActivityItem({ status, statusColor, title, meta }) {
   return (
-    <div className="h-[69px] rounded-2xl bg-[#fbfbfc] flex items-center justify-between px-4">
+    <div className="h-[69px] rounded-2xl bg-[#fbfbfc] flex flex-row-reverse items-center justify-between px-4">
       <div className="text-[14px] font-medium" style={{ color: statusColor }}>{status}</div>
-      <div className="text-end">
+      <div className="text-start">
         <div className="text-black text-sm">{title}</div>
         <div className="text-xs text-neutral-500 mt-0.5">{meta}</div>
       </div>
@@ -128,7 +128,7 @@ export default function App() {
             <div className="absolute top-[-20px] left-1/2 transform -translate-x-1/2 w-[60px] h-[60px] rounded-full bg-neutral-400/12 blur-lg"></div>
             
             {/* Search bar on the right (RTL) */}
-            <div className="w-[408px] h-11 rounded-full border border-neutral-300 flex flex-row-reverse items-center justify-between px-4 gap-2 relative overflow-hidden">
+            <div className="w-[408px] h-11 rounded-full border border-neutral-300 flex flex-row-reverse items-center justify-start px-4 gap-2 relative overflow-hidden">
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-neutral-300/10 to-transparent blur-sm"></div>
               <MagnifyingGlassIcon className="w-4 h-4 text-neutral-500 relative z-10" />
               <div className="text-neutral-500 text-sm relative z-10">جستجوی کنید ...</div>
@@ -173,7 +173,7 @@ export default function App() {
               
               <div className="relative z-10">
                 <div className="flex items-center gap-2 text-[22px] leading-8">
-                  <span className="font-bold">جدیدترین فعالیت‌ها و تکالیف کلاس</span>
+                  <span className="font-bold text-black">جدیدترین فعالیت‌ها و تکالیف کلاس</span>
                 </div>
                 <div className="text-[13px] text-neutral-500 mt-1 font-medium">آخرین فعالیت‌های انجام شده</div>
               </div>
@@ -195,7 +195,7 @@ export default function App() {
               
               <div className="relative z-10">
                 <div className="flex items-center gap-2 text-[22px] leading-8">
-                  <span className="font-bold">برنامه شما برای چند روز آینده:</span>
+                  <span className="font-bold text-black">برنامه شما برای چند روز آینده:</span>
                 </div>
                 <div className="text-[13px] text-neutral-500 mt-1 font-medium">رویدادهای پیش رو</div>
               </div>

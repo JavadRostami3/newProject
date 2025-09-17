@@ -6,7 +6,8 @@ import {
   ChartBarIcon,
   UserGroupIcon,
   AcademicCapIcon,
-  UsersIcon
+  UsersIcon,
+  ClipboardDocumentListIcon
 } from '@heroicons/react/24/outline'
 
 function StatCard({ title, value, sub, icon }) {
@@ -122,19 +123,19 @@ export default function App() {
         {/* Main content container */}
         <div className="bg-[#f5f5f5] rounded-[28px] w-[1172px] h-[792px] p-0 overflow-hidden">
           {/* Header */}
-          <div className="h-[92px] flex flex-row-reverse items-center justify-between px-8 relative">
+          <div dir="rtl" className="h-[92px] w-full flex flex-row items-center justify-between px-8 relative">
             {/* Header light effects */}
             <div className="absolute top-[-40px] left-1/2 transform -translate-x-1/2 w-[100px] h-[100px] rounded-full bg-blue-500/15 blur-xl"></div>
             <div className="absolute top-[-20px] left-1/2 transform -translate-x-1/2 w-[60px] h-[60px] rounded-full bg-neutral-400/12 blur-lg"></div>
             
             {/* Search bar on the right (RTL) */}
-            <div className="w-[408px] h-11 rounded-full border border-neutral-300 flex flex-row-reverse items-center justify-start px-4 gap-2 relative overflow-hidden">
+            <div className="w-[408px] h-11 rounded-full border border-neutral-300 flex flex-row items-center justify-start px-4 gap-2 relative overflow-hidden">
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-neutral-300/10 to-transparent blur-sm"></div>
               <MagnifyingGlassIcon className="w-4 h-4 text-neutral-500 relative z-10" />
               <div className="text-neutral-500 text-sm relative z-10">جستجوی کنید ...</div>
             </div>
 
-            {/* Icons on the right */}
+            {/* Icons on the left */}
             <div className="flex items-center gap-3 relative z-10">
               <div className="relative">
                 <div className="w-11 h-11 rounded-full border border-neutral-300 grid place-items-center text-neutral-600 relative overflow-hidden">
@@ -173,6 +174,7 @@ export default function App() {
               
               <div className="relative z-10">
                 <div className="flex items-center gap-2 text-[22px] leading-8">
+                  <ClipboardDocumentListIcon className="w-6 h-6 text-neutral-700" />
                   <span className="font-bold text-black">جدیدترین فعالیت‌ها و تکالیف کلاس</span>
                 </div>
                 <div className="text-[13px] text-neutral-500 mt-1 font-medium">آخرین فعالیت‌های انجام شده</div>

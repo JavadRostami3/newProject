@@ -12,7 +12,7 @@ import {
 function StatCard({ title, value, sub, icon }) {
   return (
     <div className="w-[264px] h-[140px] rounded-3xl bg-card/100 flex flex-col justify-center px-6 relative overflow-hidden shadow-lg">
-      <div className="flex items-center gap-6">
+      <div className="flex flex-row-reverse items-center gap-6">
         <div className="w-9 h-9 rounded-xl bg-white/20 grid place-items-center relative">
           <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/40 to-white/10 blur-sm"></div>
           <div className="relative z-10">{icon}</div>
@@ -58,7 +58,7 @@ function ActivityItem({ status, statusColor, title, meta }) {
 export default function App() {
   return (
     <div className="min-h-screen p-2">
-      <div className="max-w-[1440px] mx-auto flex gap-2">
+      <div className="max-w-[1440px] mx-auto flex flex-row-reverse gap-2">
         {/* Left sidebar */}
         <div className="w-[246px] h-[792px] flex flex-col gap-2">
           <div className="bg-sidebar rounded-[28px] shadow-lg h-[474px] relative overflow-hidden p-3">
@@ -66,7 +66,7 @@ export default function App() {
             <div className="absolute top-[-50px] left-1/2 transform -translate-x-1/2 w-[120px] h-[120px] rounded-full bg-white/20 blur-xl"></div>
             <div className="absolute top-[-30px] left-1/2 transform -translate-x-1/2 w-[80px] h-[80px] rounded-full bg-white/15 blur-lg"></div>
             
-            <div className="flex justify-end items-center h-[34px] mt-6 me-6 gap-2 relative">
+            <div className="flex flex-row-reverse justify-end items-center h-[34px] mt-6 me-6 gap-2 relative">
               <div className="text-white text-2xl font-bold relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent blur-sm rounded"></div>
                 <span className="relative z-10 font-bold">معلم یار</span>
@@ -86,7 +86,7 @@ export default function App() {
                 ['دستیار هوشمند'],
                 ['ساخت تصویر'],
               ].map(([label], idx) => (
-                <div key={idx} className={`h-[46px] rounded-full flex items-center justify-end gap-3 px-3 cursor-pointer transition-all duration-200 hover:bg-white/10 relative ${idx===0 ? 'bg-white/30' : ''}`}>
+                <div key={idx} className={`h-[46px] rounded-full flex flex-row-reverse items-center justify-end gap-3 px-3 cursor-pointer transition-all duration-200 hover:bg-white/10 relative ${idx===0 ? 'bg-white/30' : ''}`}>
                   {idx === 0 && (
                     <div className="absolute inset-0 rounded-full bg-gradient-to-r from-white/20 to-transparent blur-sm"></div>
                   )}
@@ -122,16 +122,16 @@ export default function App() {
         {/* Main content container */}
         <div className="bg-[#f5f5f5] rounded-[28px] w-[1172px] h-[792px] p-0 overflow-hidden">
           {/* Header */}
-          <div className="h-[92px] flex items-center justify-between px-8 relative">
+          <div className="h-[92px] flex flex-row-reverse items-center justify-between px-8 relative">
             {/* Header light effects */}
             <div className="absolute top-[-40px] left-1/2 transform -translate-x-1/2 w-[100px] h-[100px] rounded-full bg-blue-500/15 blur-xl"></div>
             <div className="absolute top-[-20px] left-1/2 transform -translate-x-1/2 w-[60px] h-[60px] rounded-full bg-neutral-400/12 blur-lg"></div>
             
-            {/* Search bar on the left */}
-            <div className="w-[408px] h-11 rounded-full border border-neutral-300 flex items-center px-4 gap-2 relative overflow-hidden">
+            {/* Search bar on the right (RTL) */}
+            <div className="w-[408px] h-11 rounded-full border border-neutral-300 flex flex-row-reverse items-center justify-between px-4 gap-2 relative overflow-hidden">
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-neutral-300/10 to-transparent blur-sm"></div>
               <MagnifyingGlassIcon className="w-4 h-4 text-neutral-500 relative z-10" />
-              <div className="ms-auto text-neutral-500 text-sm relative z-10">جستجوی کنید ...</div>
+              <div className="text-neutral-500 text-sm relative z-10">جستجوی کنید ...</div>
             </div>
 
             {/* Icons on the right */}
@@ -141,7 +141,7 @@ export default function App() {
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/20 to-blue-500/5 blur-sm"></div>
                   <BellIcon className="w-5 h-5 relative z-10" />
                 </div>
-                <span className="absolute -top-1 left-2 w-1.5 h-1.5 bg-[#D4151C] rounded-full shadow-lg">
+                <span className="absolute -top-1 right-2 w-1.5 h-1.5 bg-[#D4151C] rounded-full shadow-lg">
                   <div className="absolute inset-0 bg-[#D4151C] rounded-full blur-sm opacity-60"></div>
                 </span>
               </div>
@@ -153,7 +153,7 @@ export default function App() {
           </div>
 
           {/* Stat cards row */}
-          <div className="h-[160px] flex items-center gap-[18px] px-[30px]">
+          <div className="h-[160px] flex flex-row-reverse items-center gap-[18px] px-[30px]">
             <StatCard title="تعداد دانش آموزان" value={"34 نفر"} sub={null} icon={<UsersIcon className="w-5 h-5" />} />
             <StatCard title="میانگین نمرات" value={"17.24"} sub={"+2% نسبت به ماه قبل"} icon={<AcademicCapIcon className="w-5 h-5" />} />
             <StatCard title="میزان حضور در کلاس" value={"84.5%"} sub={"+5% نسبت به ماه قبل"} icon={<UserGroupIcon className="w-5 h-5" />} />
@@ -161,7 +161,7 @@ export default function App() {
           </div>
 
           {/* Lower two panels */}
-          <div className="h-[449px] flex gap-[18px] px-[30px] relative">
+          <div className="h-[449px] flex flex-row-reverse gap-[18px] px-[30px] relative">
             {/* Background light effects for panels */}
             <div className="absolute top-[-60px] left-1/2 transform -translate-x-1/2 w-[180px] h-[180px] rounded-full bg-blue-500/12 blur-2xl"></div>
             <div className="absolute top-[-40px] left-1/2 transform -translate-x-1/2 w-[120px] h-[120px] rounded-full bg-green-500/10 blur-xl"></div>

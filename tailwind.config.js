@@ -9,6 +9,7 @@ export default {
       colors: {
         sidebar: "#2a2524",
         card: "#2a2524",
+        accent: "#3C83F6",
       },
       borderRadius: {
         'xl2': '28px',

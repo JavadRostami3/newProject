@@ -1,29 +1,49 @@
-# Teacher Dashboard (Vite + React)
+# داشبورد معلم یار (Moallem Yar Dashboard)
 
-A teacher dashboard UI built with Vite + React and styled with Tailwind CSS.
+یک داشبورد آموزشی فارسی و راست‌چین برای معلمان که با Vite + React ساخته شده و با Tailwind CSS استایل‌دهی شده است. در این پروژه صفحات اصلی داشبورد، مدیریت دانش‌آموزان، گزارش‌های تحصیلی، تولید محتوا/آزمون، تقویم، دستیار هوشمند و ساخت تصویر پیاده‌سازی یا آماده توسعه هستند.
 
-## Tech
+## امکانات اصلی
+- داشبورد خلاصه کلاس با کارت‌های آماری، فعالیت‌های اخیر و رویدادهای پیش رو.
+- مدیریت دانش‌آموزان: جستجو، فیلتر وضعیت و پایه، مرتب‌سازی، صفحه‌بندی، اضافه/ویرایش/حذف نمونه‌ای و مشاهده کارنامه فرضی.
+- گزارش عملکرد تحصیلی با نمودارهای Recharts و لیست دانش‌آموزان برتر.
+- تولید محتوا و آزمون با فرم‌های کنترلی، محاسبه خودکار تعداد سوال و اعتبارسنجی ورودی.
+- صفحات تقویم، دستیار هوشمند و ساخت تصویر به‌صورت placeholder برای اتصال به سرویس‌های آینده.
+- طراحی ریسپانسیو با ناوبری اختصاصی دسکتاپ و موبایل و پشتیبانی از زبان/تاریخ شمسی (dayjs + jalaliday).
 
-- React
-- Vite
+## تکنولوژی‌ها
+- React 18 + Vite
+- React Router DOM
 - Tailwind CSS
 - Recharts
-- dayjs + jalaliday (Jalali date support)
+- dayjs + jalaliday (پشتیبانی تاریخ جلالی)
+- Lucide React (آیکون‌ها)
 
-## Getting Started
+## پیش‌نیاز
+- Node.js نسخه ۱۸ یا جدیدتر توصیه می‌شود.
 
+## شروع سریع
 ```bash
 npm install
 npm run dev
 ```
+سرویس توسعه به صورت پیش‌فرض روی `http://localhost:5173` در دسترس است.
 
-## Build
+## اسکریپت‌ها
+- `npm run dev` اجرای محیط توسعه Vite
+- `npm run build` خروجی تولید (production build)
+- `npm run preview` پیش‌نمایش خروجی تولید
 
-```bash
-npm run build
-npm run preview
+## ساختار پوشه‌ها
+```
+├─ public/
+├─ src/
+│  ├─ App.jsx          # ناوبری و لایه اصلی داشبورد
+│  ├─ main.jsx         # بوت‌استرپ React و React Router
+│  ├─ index.css        # استایل‌های پایه و Tailwind
+│  └─ pages/           # صفحات: داشبورد، دانش‌آموزان، گزارش‌ها، تولید محتوا، تقویم، دستیار، ساخت تصویر
+├─ index.html          # ورودی Vite با lang/fa-IR و RTL
+└─ package.json
 ```
 
-## Status
-
-Work in progress.
+## وضعیت
+پروژه در حال توسعه است و داده‌های فعلی نمونه (mock) هستند؛ آماده اتصال به API و سرویس‌های بیرونی.

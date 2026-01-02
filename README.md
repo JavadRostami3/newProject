@@ -1,51 +1,50 @@
-# داشبورد معلم یار (Moallem Yar Dashboard)
+# Moallem Yar (Teacher Assistant) Dashboard
 
-یک داشبورد آموزشی فارسی و راست‌چین برای معلمان که با Vite + React ساخته شده و با Tailwind CSS استایل‌دهی شده است. در این پروژه صفحات اصلی داشبورد، مدیریت دانش‌آموزان، گزارش‌های تحصیلی، تولید محتوا/آزمون، تقویم، دستیار هوشمند و ساخت تصویر پیاده‌سازی یا آماده توسعه هستند.
+An RTL Persian-language teacher dashboard built with Vite + React and styled with Tailwind CSS. It includes the main dashboard, student management, performance reports, content/test generation, calendar, AI assistant, and image-generation placeholder pages.
 
-## امکانات اصلی
-- داشبورد خلاصه کلاس با کارت‌های آماری، فعالیت‌های اخیر و رویدادهای پیش رو.
-- مدیریت دانش‌آموزان: جستجو، فیلتر وضعیت و پایه، مرتب‌سازی.
-- عملیات نمونه روی لیست: صفحه‌بندی، اضافه/ویرایش/حذف آزمایشی و مشاهده کارنامه فرضی.
-- گزارش عملکرد تحصیلی با نمودارهای Recharts و لیست دانش‌آموزان برتر.
-- تولید محتوا و آزمون با فرم‌های کنترلی، محاسبه خودکار تعداد سوال و اعتبارسنجی ورودی.
-- صفحات تقویم، دستیار هوشمند و ساخت تصویر به‌صورت placeholder برای اتصال به سرویس‌های آینده.
-- طراحی ریسپانسیو با ناوبری اختصاصی دسکتاپ و موبایل و پشتیبانی از زبان/تاریخ شمسی (dayjs + jalaliday).
+## Key Features
+- Dashboard overview with stat cards, recent activities, and upcoming events.
+- Student management: search, status/grade filters, sorting, pagination, sample add/edit/delete, and mock transcript view.
+- Performance reports with Recharts charts and top-student list.
+- Content/Test generation with validation, question distribution helpers, and sample recent items.
+- Calendar, assistant, and image pages scaffolded as placeholders for future integrations.
+- Responsive design with desktop sidebar + mobile nav, RTL layout, and Jalali date support via dayjs + jalaliday.
 
-## تکنولوژی‌ها
+## Tech Stack
 - React 18 + Vite
 - React Router DOM
 - Tailwind CSS
 - Recharts
-- dayjs + jalaliday (پشتیبانی تاریخ جلالی)
-- Lucide React (آیکون‌ها)
+- dayjs + jalaliday (Jalali calendar)
+- Lucide React (icons)
 
-## پیش‌نیازها
-- Node.js نسخه 18 یا جدیدتر
-- npm (به‌همراه Node نصب می‌شود) یا هر مدیر بسته سازگار دیگر
+## Prerequisites
+- Node.js 18 or newer
+- npm (installed with Node) or a compatible package manager
 
-## شروع سریع
+## Quick Start
 ```bash
 npm install
 npm run dev
 ```
-پس از اجرای `npm run dev`، آدرس دقیق سرویس توسعه در ترمینال نمایش داده می‌شود (مثلاً `http://localhost:5173` یا پورتی که آزاد باشد).
+After running `npm run dev`, the exact dev server URL is printed in the terminal (e.g., `http://localhost:5173` or another open port).
 
-## اسکریپت‌ها
-- `npm run dev` اجرای محیط توسعه Vite
-- `npm run build` خروجی تولید (production build)
-- `npm run preview` پیش‌نمایش خروجی تولید
+## Scripts
+- `npm run dev` — start Vite dev server
+- `npm run build` — production build
+- `npm run preview` — preview the production build
 
-## ساختار پوشه‌ها
+## Folder Structure
 ```
 ├─ public/
 ├─ src/
-│  ├─ App.jsx          # ناوبری و لایه اصلی داشبورد
-│  ├─ main.jsx         # راه‌اندازی React و React Router
-│  ├─ index.css        # استایل‌های پایه و Tailwind
-│  └─ pages/           # صفحات: داشبورد، دانش‌آموزان، گزارش‌ها، تولید محتوا، تقویم، دستیار، ساخت تصویر
-├─ index.html          # ورودی Vite با lang/fa-IR و RTL
+│  ├─ App.jsx          # Layout and navigation
+│  ├─ main.jsx         # React + React Router bootstrap
+│  ├─ index.css        # Base styles and Tailwind
+│  └─ pages/           # Dashboard, Students, Reports, Content, Calendar, Assistant, Image
+├─ index.html          # Vite entry (lang=fa-IR, dir=rtl)
 └─ package.json
 ```
 
-## وضعیت
-پروژه در حال توسعه است و داده‌های فعلی نمونه (mock) هستند؛ آماده اتصال به API و سرویس‌های بیرونی.
+## Status
+In progress. Current data is mock/sample and ready to be wired to real APIs.
